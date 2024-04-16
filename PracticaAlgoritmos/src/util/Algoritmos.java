@@ -12,14 +12,14 @@ public abstract class Algoritmos {
 		int actual = 0, siguiente = 1, auxiliar;
 		
 		for(int i = 0; i < num ; i++) {
-			auxiliar = siguiente;
-			siguiente += actual;
-			actual = siguiente;
+	        auxiliar = siguiente + actual;
+	        actual = siguiente;
+	        siguiente = auxiliar;
 		}
 		return actual;
 	}
 	/**
-	 * Metodo para coalcular el factorial de un numero que pasamos por parametro
+	 * Metodo para calcular el factorial de un numero que pasamos por parametro
 	 * 
 	 * @param num Numero que queremos calcular el factorial
 	 * @return
@@ -32,5 +32,23 @@ public abstract class Algoritmos {
 		return result;		
 	}
 	
+	/**
+	 * Metodo para comprobar si un numero es primo o no
+	 * 
+	 * @param num Numero que queremos saber si es primo
+	 * @return
+	 */
+	public static boolean esPrimo(int num) {
+		
+		if(num <= 0) {
+			return false;
+		}
+		for(int i = num-1 ; i>1;i--) {
+			if(num%i ==0) {
+				return false;
+			}
+		}
+		return true;
+	}
 
 }
