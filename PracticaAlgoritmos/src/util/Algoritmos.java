@@ -11,7 +11,7 @@ public abstract class Algoritmos {
 	public static  int fibonacci(int num) {
 		int actual = 0, siguiente = 1, auxiliar;
 		
-		for(int i = 0; i < num ; i++) {
+		for(int i = 0; i < num-1 ; i++) {
 	        auxiliar = siguiente + actual;
 	        actual = siguiente;
 	        siguiente = auxiliar;
